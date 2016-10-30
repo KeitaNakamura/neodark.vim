@@ -18,9 +18,9 @@ let s:base3     = ['#475C69', 13]
 let s:base4     = ['#658595', 7]
 let s:base5     = ['#AABBC4', 15]
 
-let s:red       = ['#E16881', 1]
+let s:red       = ['#DC657D', 1]
 let s:green     = ['#84B97C', 2]
-let s:yellow    = ['#E1BE68', 3]
+let s:yellow    = ['#D4B261', 3]
 let s:blue      = ['#639EE4', 4]
 let s:purple    = ['#B888E2', 5]
 let s:orange    = ['#E18254', 6]
@@ -65,7 +65,7 @@ call s:hi('FoldColumn',                s:base4,    s:base2,    '')
 call s:hi('Folded',                    s:base3,    s:base1,    '')
 call s:hi('IncSearch',                 s:beige,    '',         '')
 call s:hi('LineNr',                    s:base3,    '',         '')
-call s:hi('MatchParen',                s:base2,    s:beige,    'bold')
+call s:hi('MatchParen',                s:cyan,    s:base1,    'undercurl')
 call s:hi('ModeMsg',                   s:green,    '',         '')
 call s:hi('MoreMsg',                   s:green,    '',         '')
 call s:hi('NonText',                   s:base4,    '',         'none')
@@ -93,7 +93,7 @@ call s:hi('WildMenu',                  s:base2,    s:green,	   '')
 
 " Standard Syntax
 call s:hi('Comment',                   s:base4,    '',         'italic')
-call s:hi('Constant',                  s:pink,     '',         '')
+call s:hi('Constant',                  s:red,     '',         '')
 call s:hi('String',                    s:orange,   '',         '')
 call s:hi('Character',                 s:orange,   '',         '')
 call s:hi('Identifier',                s:teal,     '',         'none')
@@ -101,12 +101,13 @@ call s:hi('Function',                  s:blue,     '',         '')
 call s:hi('Statement',                 s:green,    '',         'none')
 call s:hi('Label',                     s:orange,   '',         '')
 call s:hi('Exception',                 s:red,      '',         '')
-call s:hi('PreProc',                   s:red,      '',         '')
+call s:hi('PreProc',                   s:purple,      '',         '')
 call s:hi('Define',                    s:purple,   '',         'none')
 call s:hi('Macro',                     s:purple,   '',         '')
 call s:hi('Type',                      s:yellow,   '',         'none')
 call s:hi('StorageClass',              s:teal,     '',         '')
-call s:hi('Special',                   s:brown,    '',         '')
+call s:hi('Special',                   s:pink,    '',         '')
+call s:hi('Delimiter',                 s:base4,    '',         '')
 call s:hi('Underlined',                s:blue,     '',         'none')
 call s:hi('Error',                     s:red,      s:base1,    'bold')
 call s:hi('Todo',                      s:base5,    s:base1,    'bold')
