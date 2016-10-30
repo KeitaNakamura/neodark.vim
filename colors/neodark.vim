@@ -24,7 +24,7 @@ let s:yellow    = ['#D4B261', 3]
 let s:blue      = ['#639EE4', 4]
 let s:purple    = ['#B888E2', 5]
 let s:orange    = ['#E18254', 6]
-let s:pink      = ['#DFA3A7', 9]
+let s:pink      = ['#E69CA0', 9]
 let s:teal      = ['#4DB6AC', 10]
 let s:beige     = ['#C7C18B', 11]
 let s:cyan      = ['#72C7D1', 12]
@@ -107,7 +107,6 @@ call s:hi('Macro',                     s:purple,   '',         '')
 call s:hi('Type',                      s:yellow,   '',         'none')
 call s:hi('StorageClass',              s:teal,     '',         '')
 call s:hi('Special',                   s:pink,    '',         '')
-call s:hi('Delimiter',                 s:base4,    '',         '')
 call s:hi('Underlined',                s:blue,     '',         'none')
 call s:hi('Error',                     s:red,      s:base1,    'bold')
 call s:hi('Todo',                      s:base5,    s:base1,    'bold')
