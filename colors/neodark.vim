@@ -16,14 +16,20 @@ if !exists('g:neodark_16colors')
   let g:neodark_16colors = 0
 endif
 
-if !exists('g:neodark_black')
-  let g:neodark_black = 0
+if !exists('g:neodark_color')
+  let g:neodark_color = ''
 endif
 
-if g:neodark_black == 1
-  let s:base1 = ['#2b2b2b', 236]
-  let s:base2 = ['#313131', 237]
-  let s:base3 = ['#4e4e4e', 59]
+if g:neodark_color == 'black'
+  let s:base1 = ['#191919', 236]
+  let s:base2 = ['#252525', 237]
+  let s:base3 = ['#444444', 59]
+  let s:base4 = ['#8a8a8a', 245]
+  let s:base5 = ['#d7d7d7', 250]
+elseif g:neodark_color == 'brown'
+  let s:base1 = ['#2a2525', 236]
+  let s:base2 = ['#352e2e', 237]
+  let s:base3 = ['#545152', 59]
   let s:base4 = ['#8a8a8a', 245]
   let s:base5 = ['#cbcbcb', 250]
 else
