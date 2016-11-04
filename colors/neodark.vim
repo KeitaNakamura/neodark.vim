@@ -12,23 +12,59 @@ if !exists('g:neodark_italics')
   let g:neodark_italics = 0
 endif
 
-let s:base1     = ['#1F2F38', 0]
-let s:base2     = ['#263A45', 8]
-let s:base3     = ['#475C69', 13]
-let s:base4     = ['#658595', 7]
-let s:base5     = ['#AABBC4', 15]
+if !exists('g:neodark_16colors')
+  let g:neodark_16colors = 0
+endif
 
-let s:red       = ['#DC657D', 1]
-let s:green     = ['#84B97C', 2]
-let s:yellow    = ['#D4B261', 3]
-let s:blue      = ['#639EE4', 4]
-let s:purple    = ['#B888E2', 5]
-let s:orange    = ['#E18254', 6]
-let s:pink      = ['#E69CA0', 9]
-let s:teal      = ['#4BB1A7', 10]
-let s:beige     = ['#C7C18B', 11]
-let s:cyan      = ['#72C7D1', 12]
-let s:brown     = ['#AE8785', 14]
+if !exists('g:neodark_black')
+  let g:neodark_black = 0
+endif
+
+if g:neodark_black == 1
+  let s:base1 = ['#2b2b2b', 236]
+  let s:base2 = ['#313131', 237]
+  let s:base3 = ['#4e4e4e', 59]
+  let s:base4 = ['#8a8a8a', 245]
+  let s:base5 = ['#cbcbcb', 250]
+else
+  let s:base1 = ['#1F2F38', 236]
+  let s:base2 = ['#263A45', 237]
+  let s:base3 = ['#475C69', 59]
+  let s:base4 = ['#658595', 245]
+  let s:base5 = ['#AABBC4', 250]
+endif
+
+let s:red    = ['#DC657D', 168]
+let s:green  = ['#84B97C', 108]
+let s:yellow = ['#D4B261', 179]
+let s:blue   = ['#639EE4', 74]
+let s:purple = ['#B888E2', 140]
+let s:orange = ['#E18254', 173]
+let s:pink   = ['#E69CA0', 181]
+let s:teal   = ['#4BB1A7', 73]
+let s:beige  = ['#C7C18B', 180]
+let s:cyan   = ['#72C7D1', 80]
+let s:brown  = ['#AE8785', 138]
+
+if g:neodark_16colors == 1
+  let s:base1[1]  = 0
+  let s:base2[1]  = 8
+  let s:base3[1]  = 13
+  let s:base4[1]  = 7
+  let s:base5[1]  = 15
+
+  let s:red[1]    = 1
+  let s:green[1]  = 2
+  let s:yellow[1] = 3
+  let s:blue[1]   = 4
+  let s:purple[1] = 5
+  let s:orange[1] = 6
+  let s:pink[1]   = 9
+  let s:teal[1]   = 10
+  let s:beige[1]  = 11
+  let s:cyan[1]   = 12
+  let s:brown[1]  = 14
+endif
 
 function! s:hi(group, fg, bg, attr)
   let l:attr = a:attr
