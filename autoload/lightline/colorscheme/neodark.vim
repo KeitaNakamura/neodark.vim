@@ -1,20 +1,14 @@
-let s:base1     = ['#1F2F38', 0]
-let s:base2     = ['#263A45', 8]
-let s:base3     = ['#475C69', 13]
-let s:base4     = ['#658595', 7]
-let s:base5     = ['#AABBC4', 15]
+let s:base1 = neodark#get_color('Normal',     'bg')
+let s:base2 = neodark#get_color('CursorLine', 'bg')
+let s:base3 = neodark#get_color('Visual',     'bg')
+let s:base4 = neodark#get_color('Comment',    'fg')
+let s:base5 = neodark#get_color('Normal',     'fg')
 
-let s:red       = ['#DC657D', 1]
-let s:green     = ['#84B97C', 2]
-let s:yellow    = ['#D4B261', 3]
-let s:blue      = ['#639EE4', 4]
-let s:purple    = ['#B888E2', 5]
-let s:orange    = ['#E18254', 6]
-let s:pink      = ['#E69CA0', 9]
-let s:teal      = ['#4DB6AC', 10]
-let s:beige     = ['#C7C18B', 11]
-let s:cyan      = ['#72C7D1', 12]
-let s:brown     = ['#AE8785', 14]
+let s:red    = neodark#get_color('ErrorMsg',  'fg')
+let s:green  = neodark#get_color('Statement', 'fg')
+let s:yellow = neodark#get_color('Type',      'fg')
+let s:blue   = neodark#get_color('Function',  'fg')
+let s:orange = neodark#get_color('String',    'fg')
 
 let s:p = {
 			\ 'normal':   {},
