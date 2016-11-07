@@ -26,6 +26,12 @@ if g:neodark_color == 'black'
   let s:base3 = ['#444444', 59]
   let s:base4 = ['#8a8a8a', 245]
   let s:base5 = ['#d7d7d7', 250]
+elseif g:neodark_color == 'gray'
+  let s:base1 = ['#272727', 236]
+  let s:base2 = ['#303030', 237]
+  let s:base3 = ['#484848', 59]
+  let s:base4 = ['#8a8a8a', 245]
+  let s:base5 = ['#cbcbcb', 250]
 elseif g:neodark_color == 'brown'
   let s:base1 = ['#2a2525', 236]
   let s:base2 = ['#352e2e', 237]
