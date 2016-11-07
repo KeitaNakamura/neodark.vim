@@ -1,10 +1,13 @@
 # neodark.vim
 
-#### Vim
+### Vim (True color)
 ![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot.png)
 
-#### tmux
-![tmux](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot%20tmux.png)
+### Vim (256 color, gray only)
+<img src="https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_256color.png" width="437">
+
+### tmux
+![tmux](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_tmux.png)
 
 ## Installation
 
@@ -16,17 +19,24 @@ colorscheme neodark
 let g:neodark#background='' " black, gray or brown
 ```
 
-[Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline
+If you want to use 256-color in both of vim and gvim, set
+```vim
+let g:neodark#use_256color = 1 " default: 0
+```
+
+[Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline:
 ```vim
 let g:lightline = {}
 let g:lightline.colorscheme = 'neodark'
 ```
+For airline, just use!
 
 ### Terminal
-Use `terms/NeoDark{BackgroundColor}.terminal` for Terminal.app and `terms/NeoDark{BackgroundColor}.itermcolors` for iTerm2.
+Custom terminal themes (`terms/NeoDark{BackgroundColor}.terminal` for Terminal.app and `terms/NeoDark{BackgroundColor}.itermcolors` for iTerm2) are also available.
 ```vim
-let g:neodark#use_custom_terminal_theme = 1
+let g:neodark#use_custom_terminal_theme = 1 " default: 0
 ```
+In this case, even if you use a terminal which doesn't support true color like Terminal.app, you can get true color scheme!
 
 ### tmux
 ```
