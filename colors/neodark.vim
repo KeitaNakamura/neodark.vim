@@ -14,8 +14,8 @@ if !exists('g:neodark#use_custom_terminal_theme')
   let g:neodark#use_custom_terminal_theme = 0
 endif
 
-if !exists('g:neodark#use_256colors')
-  let g:neodark#use_256colors = 0
+if !exists('g:neodark#use_256color')
+  let g:neodark#use_256color = 0
 endif
 
 if !exists('g:neodark#background')
@@ -60,7 +60,7 @@ let s:beige  = ['#C7C18B', 180]
 let s:cyan   = ['#72C7D1', 80]
 let s:brown  = ['#AE8785', 138]
 
-if g:neodark#use_256colors == 1
+if g:neodark#use_256color == 1
   let s:base1[0]  = '#303030'
   let s:base2[0]  = '#3a3a3a'
   let s:base3[0]  = '#5f5f5f'
