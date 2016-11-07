@@ -13,6 +13,7 @@ For vim-plug
 ```vim
 Plug 'KeitaNakamura/neodark.vim'
 colorscheme neodark
+let g:neodark#background='' " black, gray or brown
 ```
 
 [Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline
@@ -22,7 +23,10 @@ let g:lightline.colorscheme = 'neodark'
 ```
 
 ### Terminal
-Use `terms/NeoDark.terminal` for Terminal.app and `terms/NeoDark.itermcolors` for iTerm2.
+Use `terms/NeoDark{BackgroundColor}.terminal` for Terminal.app and `terms/NeoDark{BackgroundColor}.itermcolors` for iTerm2.
+```vim
+let g:neodark#use_custom_terminal_theme = 1
+```
 
 ### tmux
 ```
