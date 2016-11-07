@@ -4,7 +4,7 @@
 ![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot.png)
 
 ### Vim (256 color, gray only)
-<img src="https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_256color.png" width="437">
+<img src="https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_256color.png" width="445">
 
 ### tmux
 ![tmux](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_tmux.png)
