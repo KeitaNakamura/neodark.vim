@@ -47,3 +47,6 @@ or
 set -g @plugin 'KeitaNakamura/neodark.vim'
 ```
 in `.tmux.conf` with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+
+## Inspiration and special thanks
+* [tyrannicaltoucan/vim-deep-space](https://github.com/tyrannicaltoucan/vim-deep-space)
