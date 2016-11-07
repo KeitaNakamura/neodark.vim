@@ -12,8 +12,8 @@ if !exists('g:neodark#italics')
   let g:neodark#italics = 0
 endif
 
-if !exists('g:neodark#16colors')
-  let g:neodark#16colors = 0
+if !exists('g:neodark#use_custom_terminal_theme')
+  let g:neodark#use_custom_terminal_theme = 0
 endif
 
 if !exists('g:neodark#background')
