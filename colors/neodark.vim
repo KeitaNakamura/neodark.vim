@@ -4,8 +4,6 @@ if exists('syntax_on')
   syntax reset
 endif
 
-set background=dark
-
 let g:colors_name = 'neodark'
 
 if !exists('g:neodark#italics')
@@ -178,3 +176,5 @@ call s:hi('IndentGuidesEven',          '',         s:base2,    '')
 hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
+
+set background=dark
