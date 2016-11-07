@@ -58,7 +58,7 @@ let s:beige  = ['#C7C18B', 180]
 let s:cyan   = ['#72C7D1', 80]
 let s:brown  = ['#AE8785', 138]
 
-if g:neodark#16colors == 1
+if g:neodark#use_custom_terminal_theme == 1
   let s:base1[1]  = 0
   let s:base2[1]  = 8
   let s:base3[1]  = 13
