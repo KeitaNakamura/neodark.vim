@@ -8,31 +8,31 @@ set background=dark
 
 let g:colors_name = 'neodark'
 
-if !exists('g:neodark_italics')
-  let g:neodark_italics = 0
+if !exists('g:neodark#italics')
+  let g:neodark#italics = 0
 endif
 
-if !exists('g:neodark_16colors')
-  let g:neodark_16colors = 0
+if !exists('g:neodark#16colors')
+  let g:neodark#16colors = 0
 endif
 
-if !exists('g:neodark_color')
-  let g:neodark_color = ''
+if !exists('g:neodark#background')
+  let g:neodark#background = ''
 endif
 
-if g:neodark_color == 'black'
+if g:neodark#background == 'black'
   let s:base1 = ['#191919', 236]
   let s:base2 = ['#252525', 237]
   let s:base3 = ['#444444', 59]
   let s:base4 = ['#8a8a8a', 245]
   let s:base5 = ['#d7d7d7', 250]
-elseif g:neodark_color == 'gray'
+elseif g:neodark#background == 'gray'
   let s:base1 = ['#272727', 236]
   let s:base2 = ['#303030', 237]
   let s:base3 = ['#484848', 59]
   let s:base4 = ['#8a8a8a', 245]
   let s:base5 = ['#cbcbcb', 250]
-elseif g:neodark_color == 'brown'
+elseif g:neodark#background == 'brown'
   let s:base1 = ['#2a2525', 236]
   let s:base2 = ['#352e2e', 237]
   let s:base3 = ['#545152', 59]
@@ -58,7 +58,7 @@ let s:beige  = ['#C7C18B', 180]
 let s:cyan   = ['#72C7D1', 80]
 let s:brown  = ['#AE8785', 138]
 
-if g:neodark_16colors == 1
+if g:neodark#16colors == 1
   let s:base1[1]  = 0
   let s:base2[1]  = 8
   let s:base3[1]  = 13
@@ -80,7 +80,7 @@ endif
 
 function! s:hi(group, fg, bg, attr)
   let l:attr = a:attr
-  if g:neodark_italics == 0 && l:attr ==? 'italic'
+  if g:neodark#italics == 0 && l:attr ==? 'italic'
     let l:attr = 'none'
   endif
 
