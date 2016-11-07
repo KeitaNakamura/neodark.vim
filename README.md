@@ -50,3 +50,5 @@ in `.tmux.conf` with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 ## Inspiration and special thanks
 * [tyrannicaltoucan/vim-deep-space](https://github.com/tyrannicaltoucan/vim-deep-space)
+* [tyrannicaltoucan/vim-quantum](https://github.com/tyrannicaltoucan/vim-quantum)
+* [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim)
