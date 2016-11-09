@@ -182,6 +182,13 @@ call s:hi('Error',                     s:red,      s:base1,    'bold')
 call s:hi('Todo',                      s:base5,    s:base1,    'bold')
 call s:hi('Conceal',                   s:beige,    s:base1,    '')
 
+" Languages {{{
+" Vim {{{
+call s:hi('vimFunc',                   s:blue,     '',         '')
+call s:hi('vimUserFunc',               s:blue,     '',         '')
+" }}}
+" }}}
+" Plugins {{{
 " Vim-Fugitive
 call s:hi('diffAdded',                 s:green,    '',         '')
 call s:hi('diffRemoved',               s:red,      '',         '')
@@ -200,5 +207,6 @@ call s:hi('IndentGuidesEven',          '',         s:base2,    '')
 hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
+" }}}
 
 set background=dark
