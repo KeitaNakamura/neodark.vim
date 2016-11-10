@@ -186,6 +186,7 @@ call s:hi('Conceal',                   s:beige,    s:base1,    '')
 " Vim {{{
 call s:hi('vimFunc',                   s:blue,     '',         '')
 call s:hi('vimUserFunc',               s:blue,     '',         '')
+call s:hi('vimLet',                    s:yellow,   '',         '')
 " }}}
 " }}}
 " Plugins {{{
