@@ -15,16 +15,20 @@
 For vim-plug
 ```vim
 Plug 'KeitaNakamura/neodark.vim'
-let g:neodark#background='' " black, gray or brown
 colorscheme neodark
 ```
 
-If you want to use 256-color in both of vim and gvim, set
+If you want to change background, add this **before `colorscheme neodark`**
+```vim
+let g:neodark#background='black' " black, gray or brown
+```
+
+If you want to use 256-color in both of vim and gvim, put this **before `colorscheme neodark`**
 ```vim
 let g:neodark#use_256color = 1 " default: 0
 ```
 
-[Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline:
+[Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline,
 ```vim
 let g:lightline = {}
 let g:lightline.colorscheme = 'neodark'
