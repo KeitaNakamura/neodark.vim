@@ -15,8 +15,8 @@
 For vim-plug
 ```vim
 Plug 'KeitaNakamura/neodark.vim'
-colorscheme neodark
 let g:neodark#background='' " black, gray or brown
+colorscheme neodark
 ```
 
 If you want to use 256-color in both of vim and gvim, set
