@@ -148,8 +148,10 @@ call s:hi('Question',                  s:blue,       '',         'none')
 call s:hi('Search',                    s:base1,      s:beige,    '')
 call s:hi('SignColumn',                s:base5,      s:base1,    '')
 call s:hi('SpecialKey',                s:base4,      '',         '')
-call s:hi('SpellCap',                  s:blue,       s:base1,    'undercurl')
-call s:hi('SpellBad',                  s:red,        s:base1,    'undercurl')
+call s:hi('SpellBad',                  s:red,        s:base1,    'underline')
+call s:hi('SpellCap',                  s:brown,      s:base1,    'none')
+call s:hi('SpellRare',                 s:brown,      s:base1,    'none')
+call s:hi('SpellLocal',                s:brown,      s:base1,    'none')
 call s:hi('StatusLine',                s:base5,      s:base3,    'none')
 call s:hi('StatusLineNC',              s:base2,      s:base4,    '')
 call s:hi('TabLine',                   s:base4,      s:base2,    'none')
@@ -169,7 +171,6 @@ call s:hi('Character',                 s:orange,     '',         '')
 call s:hi('Identifier',                s:teal,       '',         'none')
 call s:hi('Function',                  s:blue,       '',         '')
 call s:hi('Statement',                 s:green,      '',         'none')
-call s:hi('Label',                     s:orange,     '',         '')
 call s:hi('Exception',                 s:red,        '',         '')
 call s:hi('PreProc',                   s:purple,     '',         '')
 call s:hi('Define',                    s:purple,     '',         'none')
@@ -177,16 +178,25 @@ call s:hi('Macro',                     s:purple,     '',         '')
 call s:hi('Type',                      s:yellow,     '',         'none')
 call s:hi('StorageClass',              s:teal,       '',         '')
 call s:hi('Special',                   s:pink,       '',         '')
-call s:hi('Underlined',                s:blue,       '',         'none')
+call s:hi('Underlined',                s:base5,      '',         'underline')
 call s:hi('Error',                     s:red,        s:base1,    'bold')
 call s:hi('Todo',                      s:base5,      s:base1,    'bold')
 call s:hi('Conceal',                   s:beige,      s:base1,    '')
 
 " Languages {{{
 " Vim {{{
-call s:hi('vimFunc',                   s:blue,       '',         '')
-call s:hi('vimUserFunc',               s:blue,       '',         '')
+hi! link vimFunc     Function
+hi! link vimUserFunc Function
 call s:hi('vimLet',                    s:yellow,     '',         '')
+" }}}
+" Shell {{{
+hi! link shFunction  Function
+" }}}
+" Pandoc markdown {{{
+call s:hi('pandocDelimitedCodeBlock',      s:blue,       '',         '')
+call s:hi('pandocDelimitedCodeBlockStart', s:base5,      '',         '')
+call s:hi('pandocDelimitedCodeBlockEnd',   s:base5,      '',         '')
+call s:hi('pandocAtxHeader',               s:orange,     '',         'bold')
 " }}}
 " }}}
 " Plugins {{{
