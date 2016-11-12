@@ -115,7 +115,7 @@ function! s:hi(group, fg, bg, attr)
   endif
 
   if l:attr != ''
-    exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
+    exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr . ' guisp=none'
   endif
 endfun
 
