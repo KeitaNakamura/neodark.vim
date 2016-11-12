@@ -178,6 +178,7 @@ call s:hi('Macro',                     s:purple,     '',         '')
 call s:hi('Type',                      s:yellow,     '',         'none')
 call s:hi('StorageClass',              s:teal,       '',         '')
 call s:hi('Special',                   s:pink,       '',         '')
+call s:hi('Delimiter',                 s:base5,      '',         '')
 call s:hi('Underlined',                s:base5,      '',         'underline')
 call s:hi('Error',                     s:red,        s:base1,    'bold')
 call s:hi('Todo',                      s:base5,      s:base1,    'bold')
@@ -197,6 +198,15 @@ call s:hi('pandocDelimitedCodeBlock',      s:blue,       '',         '')
 call s:hi('pandocDelimitedCodeBlockStart', s:base5,      '',         '')
 call s:hi('pandocDelimitedCodeBlockEnd',   s:base5,      '',         '')
 call s:hi('pandocAtxHeader',               s:orange,     '',         'bold')
+" }}}
+" TeX {{{
+call s:hi('texRefZone', s:orange,       '',         '')
+call s:hi('texMath',    s:blue,         '',         '')
+" }}}
+" Ruby {{{
+hi! link rubyStringDelimiter String
+hi! link rubyBlockParameterList rubyBlockParameter
+call s:hi('rubyInterpolationDelimiter', s:teal,       '',         '')
 " }}}
 " }}}
 " Plugins {{{
