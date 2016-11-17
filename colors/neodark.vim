@@ -157,7 +157,7 @@ call s:hi('StatusLineNC',              s:base2,      s:base4,    '')
 call s:hi('TabLine',                   s:base4,      s:base2,    'none')
 call s:hi('TabLineFill',               s:base4,      s:base2,    'none')
 call s:hi('TabLineSel',                s:yellow,     s:base3,    'none')
-call s:hi('Title',                     s:red,        '',         'none')
+call s:hi('Title',                     s:orange,     '',         'none')
 call s:hi('VertSplit',                 s:base4,      s:base1,    'none')
 call s:hi('Visual',                    s:base5,      s:base3,    '')
 call s:hi('WarningMsg',                s:red,        '',         '')
@@ -192,6 +192,15 @@ call s:hi('vimLet',                    s:yellow,     '',         '')
 " }}}
 " Shell {{{
 hi! link shFunction  Function
+" }}}
+" Markdown {{{
+hi! link markdownHeadingDelimiter  Statement
+hi! link markdownLinkDelimiter     Statement
+hi! link markdownLinkTextDelimiter Statement
+hi! link markdownLinkText          Statement
+hi! link markdownURL               Underlined
+call s:hi('markdownCode',        s:blue,       '',         '')
+call s:hi('markdownListMarker',  s:teal,       '',         '')
 " }}}
 " Pandoc markdown {{{
 call s:hi('pandocDelimitedCodeBlock',      s:blue,       '',         '')
