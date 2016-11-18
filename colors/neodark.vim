@@ -221,6 +221,10 @@ hi! link rubyStringDelimiter String
 hi! link rubyBlockParameterList rubyBlockParameter
 call s:hi('rubyInterpolationDelimiter', s:teal,       '',         '')
 " }}}
+" Go {{{
+hi! link goFunctionCall Function
+hi! link goMethodCall   Function
+" }}}
 " }}}
 " Plugins {{{
 " Vim-Fugitive
