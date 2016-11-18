@@ -135,7 +135,7 @@ call s:hi('FoldColumn',                s:base4,      s:base2,    '')
 call s:hi('Folded',                    s:base3,      s:base1,    '')
 call s:hi('IncSearch',                 s:beige,      '',         '')
 call s:hi('LineNr',                    s:base3,      '',         '')
-call s:hi('MatchParen',                s:light_blue, s:base1,    'undercurl')
+call s:hi('MatchParen',                s:light_blue, s:base1,    'underline,bold')
 call s:hi('ModeMsg',                   s:green,      '',         '')
 call s:hi('MoreMsg',                   s:green,      '',         '')
 call s:hi('NonText',                   s:base4,      '',         'none')
@@ -199,8 +199,12 @@ hi! link markdownLinkDelimiter     Statement
 hi! link markdownLinkTextDelimiter Statement
 hi! link markdownLinkText          Statement
 hi! link markdownURL               Underlined
-call s:hi('markdownCode',        s:blue,       '',         '')
-call s:hi('markdownListMarker',  s:teal,       '',         '')
+call s:hi('markdownCode',          s:blue,       '',         '')
+call s:hi('markdownListMarker',    s:teal,       '',         '')
+call s:hi('markdownHeadingRule',   s:base4,      '',         '')
+call s:hi('markdownCodeDelimiter', s:green,      '',         '')
+call s:hi('markdownBold',          '',           '',         'bold')
+call s:hi('markdownBoldItalic',    '',           '',         'bold,italic')
 " }}}
 " Pandoc markdown {{{
 call s:hi('pandocDelimitedCodeBlock',      s:blue,       '',         '')
