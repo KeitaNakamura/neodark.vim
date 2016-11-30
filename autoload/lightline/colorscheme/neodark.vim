@@ -22,10 +22,10 @@ let s:p = {
 let s:p.normal.middle = [
             \ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.normal.left = [
-            \ [s:base1[0], s:green[0], s:base1[1], s:green[1]],
+            \ [s:green[0], s:base1[0], s:green[1], s:base1[1], 'inverse'],
             \ [s:base5[0], s:base3[0], s:base5[1], s:base3[1]]]
 let s:p.normal.right = [
-            \ [s:base1[0], s:base4[0], s:base1[1], s:base4[1]],
+            \ [s:base4[0], s:base1[0], s:base4[1], s:base1[1], 'inverse'],
             \ [s:base4[0], s:base3[0], s:base4[1], s:base3[1]]]
 
 let s:p.inactive.middle = [
@@ -38,33 +38,23 @@ let s:p.inactive.left = [
 			\ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 
 let s:p.insert.left = [
-			\ [s:base1[0], s:blue[0], s:base1[1], s:blue[1]],
+			\ [s:blue[0], s:base1[0], s:blue[1], s:base1[1], 'inverse'],
 			\ s:p.normal.left[1]]
 let s:p.replace.left = [
-			\ [s:base1[0], s:red[0], s:base1[1], s:red[1]],
+			\ [s:red[0], s:base1[0], s:red[1], s:base1[1], 'inverse'],
 			\ s:p.normal.left[1]]
 let s:p.visual.left = [
-			\ [s:base2[0], s:orange[0], s:base2[1], s:orange[1]],
+			\ [s:orange[0], s:base1[0], s:orange[1], s:base1[1], 'inverse'],
 			\ s:p.normal.left[1]]
 
 let s:p.tabline.middle = [
             \ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.tabline.right = [
-            \ [s:base1[0], s:base4[0], s:base1[1], s:base4[1]],
+            \ [s:base4[0], s:base1[0], s:base4[1], s:base1[1], 'inverse'],
             \ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.tabline.left = [
             \ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.tabline.tabsel = [
             \ [s:yellow[0], s:base3[0], s:yellow[1], s:base3[1]]]
-
-" let s:p.tabline.middle = [
-            " \ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
-" let s:p.tabline.right = [
-            " \ [s:base1[0], s:base4[0], s:base1[1], s:base4[1]],
-            " \ [s:base5[0], s:base3[0], s:base5[1], s:base3[1]]]
-" let s:p.tabline.left = [
-            " \ [s:base5[0], s:base3[0], s:base5[1], s:base3[1]]]
-" let s:p.tabline.tabsel = [
-            " \ [s:base1[0], s:green[0], s:base1[1], s:green[1]]]
 
 let g:lightline#colorscheme#neodark#palette = s:p

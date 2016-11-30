@@ -22,6 +22,10 @@ if !exists('g:neodark#background')
   let g:neodark#background = ''
 endif
 
+if !exists('g:neodark#terminal_transparent')
+  let g:neodark#terminal_transparent = 0
+endif
+
 if g:neodark#background == 'black'
   let s:base1 = ['#191919', 236]
   let s:base2 = ['#252525', 237]
@@ -99,6 +103,12 @@ if g:neodark#use_custom_terminal_theme == 1
   let s:light_blue[1] = 12
   let s:brown[1]      = 14
 endif
+
+" Transparent Background
+if g:neodark#terminal_transparent == 1
+  let s:base1[1] = 'none' " This doesn't work well for airline
+end
+
 
 function! s:hi(group, fg, bg, attr)
   let l:attr = a:attr

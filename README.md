@@ -31,6 +31,11 @@ If you want to use 256-color in both of vim and gvim, put this **before `colorsc
 let g:neodark#use_256color = 1 " default: 0
 ```
 
+If you want to use your default terminal background, put this **before `colorscheme neodark`**
+```vim
+let g:neodark#terminal_transparent = 1 " default: 0
+```
+
 [Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline,
 
 ```vim
