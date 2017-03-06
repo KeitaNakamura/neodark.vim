@@ -10,6 +10,10 @@ if !exists('g:neodark#italics')
   let g:neodark#italics = 0
 endif
 
+if !exists('g:neodark#visibility')
+  let g:neodark#visibility = ''
+endif
+
 if !exists('g:neodark#use_custom_terminal_theme')
   let g:neodark#use_custom_terminal_theme = 0
 endif
@@ -148,7 +152,6 @@ call s:hi('LineNr',                    s:base3,      '',         '')
 call s:hi('MatchParen',                s:light_blue, s:base1,    'underline,bold')
 call s:hi('ModeMsg',                   s:green,      '',         '')
 call s:hi('MoreMsg',                   s:green,      '',         '')
-call s:hi('NonText',                   s:base4,      '',         'none')
 call s:hi('Normal',                    s:base5,      s:base1,    'none')
 call s:hi('Pmenu',                     s:base5,      s:base3,    '')
 call s:hi('PmenuSbar',                 '',           s:base2,    '')
@@ -157,7 +160,6 @@ call s:hi('PmenuThumb',                '',           s:base4,    '')
 call s:hi('Question',                  s:blue,       '',         'none')
 call s:hi('Search',                    s:base1,      s:beige,    '')
 call s:hi('SignColumn',                s:base5,      s:base1,    '')
-call s:hi('SpecialKey',                s:base4,      '',         '')
 call s:hi('SpellBad',                  s:red,        s:base1,    'underline')
 call s:hi('SpellCap',                  s:brown,      s:base1,    'none')
 call s:hi('SpellRare',                 s:brown,      s:base1,    'none')
@@ -173,8 +175,22 @@ call s:hi('Visual',                    s:base5,      s:base3,    '')
 call s:hi('WarningMsg',                s:red,        '',         '')
 call s:hi('WildMenu',                  s:base2,      s:green,	   '')
 
+" Visibility level for special characters and comments
+if g:neodark#visibility == 'low'
+  call s:hi('NonText',                   s:base1,      '',         'none')
+  call s:hi('SpecialKey',                s:base1,      '',         '')
+  call s:hi('Comment',                   s:base3,      '',         'italic')
+elseif g:neodark#visibility == 'high'
+  call s:hi('NonText',                   s:base4,      '',         'none')
+  call s:hi('SpecialKey',                s:base4,      '',         '')
+  call s:hi('Comment',                   s:base4,      '',         'italic')
+else
+  call s:hi('NonText',                   s:base2,      '',         'none')
+  call s:hi('SpecialKey',                s:base3,      '',         '')
+  call s:hi('Comment',                   s:base3,      '',         'italic')
+endif
+
 " Standard Syntax
-call s:hi('Comment',                   s:base4,      '',         'italic')
 call s:hi('Constant',                  s:red,        '',         '')
 call s:hi('String',                    s:orange,     '',         '')
 call s:hi('Character',                 s:orange,     '',         '')
