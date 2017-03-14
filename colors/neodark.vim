@@ -6,6 +6,108 @@ endif
 
 let g:colors_name = 'neodark'
 
+" Functions {{{
+function s:generate_base_colors(base1)
+  let b1 = s:RGB2HSL(s:hex2RGB(a:base1))
+  let b2 = [b1[0], b1[1], b1[2]+5]
+  let b3 = [b1[0], b1[1], b2[2]+10]
+  let b4 = [b1[0], b1[1], b3[2]+15]
+  let b5 = [b1[0], b1[1], b4[2]+25]
+  return [a:base1,
+        \ s:RGB2hex(s:HSL2RGB(b2)),
+        \ s:RGB2hex(s:HSL2RGB(b3)),
+        \ s:RGB2hex(s:HSL2RGB(b4)),
+        \ s:RGB2hex(s:HSL2RGB(b5))]
+endfunction
+
+function s:hex2RGB(hex)
+  let R = printf("%d", "0x".a:hex[1:2])
+  let G = printf("%d", "0x".a:hex[3:4])
+  let B = printf("%d", "0x".a:hex[5:6])
+  return [R,G,B]
+endfunction
+
+function s:RGB2hex(RGB)
+  return printf("#%x%x%x", a:RGB[0], a:RGB[1], a:RGB[2])
+endfunction
+
+function s:RGB2HSL(RGB)
+  let R = a:RGB[0]
+  let G = a:RGB[1]
+  let B = a:RGB[2]
+
+  let MAX = max([R, G, B])
+  let MIN = min([R, G, B])
+
+  let H = MAX - MIN
+  if H > 0
+    if MAX == R
+      let H = 60 * (G - B) / H
+    elseif MAX == G
+      let H = 60 * (B - R) / H + 120
+    elseif MAX == B
+      let H = 60 * (R - G) / H + 240
+    endif
+    if H < 0
+      let H += 360
+    endif
+  endif
+
+  let CNT = (MAX + MIN) / 2
+  if CNT < 128
+    let S = 100 * (MAX - MIN) / (MAX + MIN)
+  else
+    let S = 100 * (MAX - MIN) / (510 - MAX - MIN)
+  endif
+
+  let L = CNT * 100 / 255
+
+  return [H,S,L]
+endfunction
+
+function s:HSL2RGB(HSL)
+  let H = a:HSL[0]
+  let S = a:HSL[1]
+  let L = a:HSL[2]
+
+  if L < 50
+    let MAX = 255 * (L + L*S/100) / 100
+    let MIN = 255 * (L - L*S/100) / 100
+  else
+    let MAX = 255 * (L + (100-L)*S/100) / 100
+    let MIN = 255 * (L - (100-L)*S/100) / 100
+  endif
+
+  if H < 60
+    let R = MAX
+    let G = H * (MAX-MIN) / 60 + MIN
+    let B = MIN
+  elseif H < 120
+    let R = (120-H) * (MAX-MIN) / 60 + MIN
+    let G = MAX
+    let B = MIN
+  elseif H < 180
+    let R = MIN
+    let G = MAX
+    let B = (H-120) * (MAX-MIN) / 60 + MIN
+  elseif H < 240
+    let R = MIN
+    let G = (240-H) * (MAX-MIN) / 60 + MIN
+    let B = MAX
+  elseif H < 300
+    let R = (H-240) * (MAX-MIN) / 60 + MIN
+    let G = MIN
+    let B = MAX
+  else
+    let R = MAX
+    let G = MIN
+    let B = (360-H) * (MAX-MIN) / 60 + MIN
+  endif
+  return [R,G,B]
+endfunction
+
+" }}}
+
 if !exists('g:neodark#italics')
   let g:neodark#italics = 0
 endif
@@ -30,30 +132,29 @@ if !exists('g:neodark#solid_vertsplit')
   let g:neodark#solid_vertsplit = 0
 endif
 
-if g:neodark#background == 'black'
-  let s:base1 = ['#191919', 236]
-  let s:base2 = ['#252525', 237]
-  let s:base3 = ['#444444', 59]
-  let s:base4 = ['#8a8a8a', 245]
-  let s:base5 = ['#d7d7d7', 250]
-elseif g:neodark#background == 'gray'
-  let s:base1 = ['#272727', 236]
-  let s:base2 = ['#303030', 237]
-  let s:base3 = ['#484848', 59]
-  let s:base4 = ['#8a8a8a', 245]
-  let s:base5 = ['#cbcbcb', 250]
-elseif g:neodark#background == 'brown'
-  let s:base1 = ['#2a2525', 236]
-  let s:base2 = ['#352e2e', 237]
-  let s:base3 = ['#545152', 59]
-  let s:base4 = ['#8a8a8a', 245]
-  let s:base5 = ['#cbcbcb', 250]
-else
+if g:neodark#background == ''
   let s:base1 = ['#1F2F38', 236]
   let s:base2 = ['#263A45', 237]
   let s:base3 = ['#475C69', 59]
   let s:base4 = ['#658595', 245]
   let s:base5 = ['#AABBC4', 250]
+else
+  if g:neodark#background == 'black'
+    echoerr '[neodark] black is deperecated for background. Use #191919 instead.'
+    let g:neodark#background = '#191919'
+  elseif g:neodark#background == 'gray'
+    echoerr '[neodark] gray is deperecated for background. Use #272727 instead.'
+    let g:neodark#background = '#272727'
+  elseif g:neodark#background == 'brown'
+    echoerr '[neodark] brown is deperecated for background. Use #2a2525 instead.'
+    let g:neodark#background = '#2a2525'
+  endif
+  let bases = s:generate_base_colors(g:neodark#background)
+  let s:base1 = [bases[0], 236]
+  let s:base2 = [bases[1], 237]
+  let s:base3 = [bases[2], 59]
+  let s:base4 = [bases[3], 245]
+  let s:base5 = [bases[4], 250]
 endif
 
 let s:red        = ['#DC657D', 168]
