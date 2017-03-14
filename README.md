@@ -36,6 +36,11 @@ If you want to use your default terminal background, put this **before `colorsch
 let g:neodark#terminal_transparent = 1 " default: 0
 ```
 
+If you want solid vertical split matching the statusline, put this **before `colorscheme neodark`**
+```vim
+let g:neodark#solid_vertsplit = 1 " default: 0
+```
+
 If you want to adjust the visibility of comments, listchars, and specialkey, put this **before `colorscheme neodark`**
 ```vim
 let g:neodark#visibility = 'low' " options: 'low'|'high',  default: ''

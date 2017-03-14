@@ -30,6 +30,10 @@ if !exists('g:neodark#terminal_transparent')
   let g:neodark#terminal_transparent = 0
 endif
 
+if !exists('g:neodark#solid_vertsplit')
+  let g:neodark#solid_vertsplit = 0
+endif
+
 if g:neodark#background == 'black'
   let s:base1 = ['#191919', 236]
   let s:base2 = ['#252525', 237]
@@ -170,7 +174,6 @@ call s:hi('TabLine',                   s:base4,      s:base2,    'none')
 call s:hi('TabLineFill',               s:base4,      s:base2,    'none')
 call s:hi('TabLineSel',                s:yellow,     s:base3,    'none')
 call s:hi('Title',                     s:orange,     '',         'none')
-call s:hi('VertSplit',                 s:base4,      s:base1,    'none')
 call s:hi('Visual',                    s:base5,      s:base3,    '')
 call s:hi('WarningMsg',                s:red,        '',         '')
 call s:hi('WildMenu',                  s:base2,      s:green,	   '')
@@ -188,6 +191,13 @@ else
   call s:hi('NonText',                   s:base2,      '',         'none')
   call s:hi('SpecialKey',                s:base3,      '',         '')
   call s:hi('Comment',                   s:base3,      '',         'italic')
+endif
+
+" Solid bar for vertical split
+if g:neodark#solid_vertsplit == 1
+  call s:hi('VertSplit',                 s:base2,      s:base2,    'none')
+else
+  call s:hi('VertSplit',                 s:base4,      s:base1,    'none')
 endif
 
 " Standard Syntax
