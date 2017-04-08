@@ -1,13 +1,20 @@
 # neodark.vim
 
 ### Vim (True color)
-![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot.png)
 
-### Vim (256 color, gray only)
-<img src="https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_256color.png" width="445">
+*Default color*
+
+![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/default.png)
+
+*`#202020` background color*
+
+![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/202020.png)
+
+### Vim (256 color)
+![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/256.png)
 
 ### tmux
-![tmux](https://github.com/KeitaNakamura/neodark.vim/blob/master/Screenshot_tmux.png)
+![tmux](https://github.com/KeitaNakamura/neodark.vim/blob/master/tmux.png)
 
 ## Installation
 
@@ -19,24 +26,24 @@ Plug 'KeitaNakamura/neodark.vim'
 colorscheme neodark
 ```
 
-If you want to change background, add this **before `colorscheme neodark`**
+If you want to change background, set the 6 digit color code:
 
 ```vim
-let g:neodark#background='black' " black, gray or brown
+let g:neodark#background = '#202020'
 ```
 
-If you want to use 256-color in both of vim and gvim, put this **before `colorscheme neodark`**
+To use 256-color in both of vim and gvim:
 
 ```vim
 let g:neodark#use_256color = 1 " default: 0
 ```
 
-If you want to use your default terminal background, put this **before `colorscheme neodark`**
+To use your default terminal background:
 ```vim
 let g:neodark#terminal_transparent = 1 " default: 0
 ```
 
-If you want solid vertical split matching the statusline, put this **before `colorscheme neodark`**
+If you want solid vertical split matching the statusline:
 ```vim
 let g:neodark#solid_vertsplit = 1 " default: 0
 ```
