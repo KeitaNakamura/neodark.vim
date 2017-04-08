@@ -2,11 +2,11 @@
 
 ### Vim (True color)
 
-*Default color*
+**Default color**
 
 ![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/default.png)
 
-*`#202020` background color*
+**`#202020` background color**
 
 ![vim](https://github.com/KeitaNakamura/neodark.vim/blob/master/202020.png)
 
