@@ -58,7 +58,7 @@ let g:lightline.colorscheme = 'neodark'
 For airline, just use!
 
 ### Terminal
-Custom terminal themes (`terms/NeoDark{BackgroundColor}.terminal` for Terminal.app and `terms/NeoDark{BackgroundColor}.itermcolors` for iTerm2) are also available.
+Custom terminal themes (`terms/NeoDark.terminal` for Terminal.app and `terms/NeoDark.itermcolors` for iTerm2) are also available.
 
 ```vim
 let g:neodark#use_custom_terminal_theme = 1 " default: 0
