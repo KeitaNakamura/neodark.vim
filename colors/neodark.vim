@@ -7,7 +7,7 @@ endif
 let g:colors_name = 'neodark'
 
 " Functions {{{
-function s:generate_base_colors(base1)
+function! s:generate_base_colors(base1)
   let b1 = s:RGB2HSL(s:hex2RGB(a:base1))
   let b2 = [b1[0], b1[1], b1[2]+5]
   let b3 = [b1[0], b1[1], b2[2]+10]
@@ -20,18 +20,18 @@ function s:generate_base_colors(base1)
         \ s:RGB2hex(s:HSL2RGB(b5))]
 endfunction
 
-function s:hex2RGB(hex)
+function! s:hex2RGB(hex)
   let R = printf("%d", "0x".a:hex[1:2])
   let G = printf("%d", "0x".a:hex[3:4])
   let B = printf("%d", "0x".a:hex[5:6])
   return [R,G,B]
 endfunction
 
-function s:RGB2hex(RGB)
+function! s:RGB2hex(RGB)
   return printf("#%x%x%x", a:RGB[0], a:RGB[1], a:RGB[2])
 endfunction
 
-function s:RGB2HSL(RGB)
+function! s:RGB2HSL(RGB)
   let R = a:RGB[0]
   let G = a:RGB[1]
   let B = a:RGB[2]
@@ -65,7 +65,7 @@ function s:RGB2HSL(RGB)
   return [H,S,L]
 endfunction
 
-function s:HSL2RGB(HSL)
+function! s:HSL2RGB(HSL)
   let H = a:HSL[0]
   let S = a:HSL[1]
   let L = a:HSL[2]
