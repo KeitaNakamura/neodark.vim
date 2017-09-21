@@ -78,7 +78,8 @@ or
 set -g @plugin 'KeitaNakamura/neodark.vim'
 ```
 
-in `.tmux.conf` with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+in `.tmux.conf` with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
+[tmux-statusbar](https://github.com/KeitaNakamura/tmux-statusbar) is used for tmux statusbar in the screen shot.
 
 ## Inspiration and special thanks
 * [tyrannicaltoucan/vim-deep-space](https://github.com/tyrannicaltoucan/vim-deep-space)
