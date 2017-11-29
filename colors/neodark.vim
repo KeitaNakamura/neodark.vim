@@ -139,16 +139,6 @@ if g:neodark#background == ''
   let s:base4 = ['#658595', 245]
   let s:base5 = ['#AABBC4', 250]
 else
-  if g:neodark#background == 'black'
-    echoerr '[neodark] black is deperecated for background. Use #191919 instead.'
-    let g:neodark#background = '#191919'
-  elseif g:neodark#background == 'gray'
-    echoerr '[neodark] gray is deperecated for background. Use #272727 instead.'
-    let g:neodark#background = '#272727'
-  elseif g:neodark#background == 'brown'
-    echoerr '[neodark] brown is deperecated for background. Use #2a2525 instead.'
-    let g:neodark#background = '#2a2525'
-  endif
   let bases = s:generate_base_colors(g:neodark#background)
   let s:base1 = [bases[0], 236]
   let s:base2 = [bases[1], 237]
@@ -361,6 +351,12 @@ call s:hi('GitGutterChangeDelete',     s:orange,     '',         '')
 " indent-guides
 call s:hi('IndentGuidesOdd',           '',           s:base2,    '')
 call s:hi('IndentGuidesEven',          '',           s:base2,    '')
+
+" indentLine
+let g:indentLine_color_gui = s:base3[0]
+let g:indentLine_bgcolor_gui = s:base1[0]
+let g:indentLine_color_term = s:base3[1]
+let g:indentLine_bgcolor_term = s:base1[1]
 
 " Vim-Signify
 hi link SignifySignAdd GitGutterAdd
