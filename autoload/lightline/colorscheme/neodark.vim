@@ -27,6 +27,10 @@ let s:p.normal.left = [
 let s:p.normal.right = [
             \ [s:base4[0], s:base1[0], s:base4[1], s:base1[1], 'inverse'],
             \ [s:base4[0], s:base3[0], s:base4[1], s:base3[1]]]
+let s:p.normal.error = [
+            \ [ s:base2[0], s:red[0], s:base2[1], s:red[1]]]
+let s:p.normal.warning = [
+            \ [ s:base2[0], s:yellow[0], s:base2[1], s:yellow[1]]]
 
 let s:p.inactive.middle = [
 			\ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
