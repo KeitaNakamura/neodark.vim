@@ -48,6 +48,11 @@ If you want solid vertical split matching the statusline:
 let g:neodark#solid_vertsplit = 1 " default: 0
 ```
 
+If you want to use *Italics*:
+```vim
+let g:neodark#italics = 1 " default: 0
+```
+
 [Airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline,
 
 ```vim
