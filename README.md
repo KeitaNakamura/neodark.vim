@@ -10,7 +10,7 @@ colorscheme neodark
 
 ## Options
 
-> **NOTE:** All options must be before `colorscheme`
+> **NOTE:** All options must be before setting `colorscheme`
 
 To use your default terminal background:
 ```vim
