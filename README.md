@@ -1,5 +1,3 @@
-### NOTE: If you encounter an error during update, please reinstall the plugin. Sorry for inconvenience :(
-
 ![header](https://github.com/KeitaNakamura/neodark.vim/blob/master/img/header.png)
 
 ## Installation
