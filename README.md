@@ -27,7 +27,7 @@ To use *italics*:
  let g:neodark#italics = 1 " default: 0
  ```
 
-# Status bar
+## Status bar
 
 [airline](https://github.com/vim-airline/vim-airline) and [lightline](https://github.com/itchyny/lightline.vim) themes are also included. For lightline,
 
