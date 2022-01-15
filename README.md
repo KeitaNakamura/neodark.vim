@@ -3,8 +3,8 @@
 ## Installation
 
 ```vim
-Plug 'KeitaNakamura/neodark.vim' # vim-plug
-set termguicolors # recommended
+Plug 'KeitaNakamura/neodark.vim' " vim-plug
+set termguicolors                " recommended
 colorscheme neodark
 ```
 
