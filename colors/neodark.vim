@@ -147,17 +147,17 @@ else
   let s:base5 = [bases[4], 250]
 endif
 
-let s:red        = ['#DC657D', 168]
-let s:green      = ['#84B97C', 108]
-let s:yellow     = ['#D4B261', 179]
-let s:blue       = ['#639EE4', 74]
-let s:purple     = ['#B888E2', 140]
-let s:orange     = ['#E18254', 173]
-let s:pink       = ['#E69CA0', 181]
-let s:teal       = ['#4BB1A7', 73]
-let s:beige      = ['#C7C18B', 180]
-let s:light_blue = ['#72C7D1', 80]
-let s:brown      = ['#AE8785', 138]
+let s:red           = ['#DC657D', 168]
+let s:green         = ['#84B97C', 108]
+let s:yellow        = ['#D4B261', 179]
+let s:blue          = ['#639EE4', 74]
+let s:purple        = ['#B888E2', 140]
+let s:orange        = ['#E18254', 173]
+let s:pink          = ['#E69CA0', 181]
+let s:teal          = ['#4BB1A7', 73]
+let s:golden_yellow = ['#C99720', 180]
+let s:light_blue    = ['#72C7D1', 80]
+let s:brown         = ['#AE8785', 138]
 
 if g:neodark#use_256color == 1
   let s:base1[0] = '#303030'
@@ -166,17 +166,17 @@ if g:neodark#use_256color == 1
   let s:base4[0] = '#8a8a8a'
   let s:base5[0] = '#bcbcbc'
 
-  let s:red[0]        = '#d75f87'
-  let s:green[0]      = '#87af87'
-  let s:yellow[0]     = '#d7af5f'
-  let s:blue[0]       = '#5fafd7'
-  let s:purple[0]     = '#af87d7'
-  let s:orange[0]     = '#d7875f'
-  let s:pink[0]       = '#d7afaf'
-  let s:teal[0]       = '#5fafaf'
-  let s:beige[0]      = '#d7af87'
-  let s:light_blue[0] = '#5fd7d7'
-  let s:brown[0]      = '#af8787'
+  let s:red[0]           = '#d75f87'
+  let s:green[0]         = '#87af87'
+  let s:yellow[0]        = '#d7af5f'
+  let s:blue[0]          = '#5fafd7'
+  let s:purple[0]        = '#af87d7'
+  let s:orange[0]        = '#d7875f'
+  let s:pink[0]          = '#d7afaf'
+  let s:teal[0]          = '#5fafaf'
+  let s:golden_yellow[0] = '#d7af87'
+  let s:light_blue[0]    = '#5fd7d7'
+  let s:brown[0]         = '#af8787'
 endif
 
 if g:neodark#use_custom_terminal_theme == 1
@@ -186,17 +186,17 @@ if g:neodark#use_custom_terminal_theme == 1
   let s:base4[1] = 7
   let s:base5[1] = 15
 
-  let s:red[1]        = 1
-  let s:green[1]      = 2
-  let s:yellow[1]     = 3
-  let s:blue[1]       = 4
-  let s:purple[1]     = 5
-  let s:orange[1]     = 6
-  let s:pink[1]       = 9
-  let s:teal[1]       = 10
-  let s:beige[1]      = 11
-  let s:light_blue[1] = 12
-  let s:brown[1]      = 14
+  let s:red[1]           = 1
+  let s:green[1]         = 2
+  let s:yellow[1]        = 3
+  let s:blue[1]          = 4
+  let s:purple[1]        = 5
+  let s:orange[1]        = 6
+  let s:pink[1]          = 9
+  let s:teal[1]          = 10
+  let s:golden_yellow[1] = 11
+  let s:light_blue[1]    = 12
+  let s:brown[1]         = 14
 endif
 
 " Transparent Background
@@ -217,7 +217,7 @@ if has('nvim')
   let g:terminal_color_8  = s:base2[0]
   let g:terminal_color_9  = s:pink[0]
   let g:terminal_color_10 = s:teal[0]
-  let g:terminal_color_11 = s:beige[0]
+  let g:terminal_color_11 = s:golden_yellow[0]
   let g:terminal_color_12 = s:light_blue[0]
   let g:terminal_color_13 = s:base3[0]
   let g:terminal_color_14 = s:brown[0]
@@ -227,7 +227,7 @@ endif
 " vim terminal colors
 let g:terminal_ansi_colors = [s:base1[0], s:red[0], s:green[0], s:yellow[0],
       \ s:blue[0], s:purple[0], s:orange[0], s:base4[0], s:base2[0], s:pink[0],
-      \ s:teal[0], s:beige[0], s:light_blue[0], s:base3[0], s:brown[0], s:base5[0]]
+      \ s:teal[0], s:golden_yellow[0], s:light_blue[0], s:base3[0], s:brown[0], s:base5[0]]
 
 function! s:hi(group, fg, bg, attr)
   let l:attr = a:attr
@@ -249,47 +249,47 @@ function! s:hi(group, fg, bg, attr)
 endfun
 
 " Vim Editor
-call s:hi('ColorColumn',               '',           s:base2,    '')
-call s:hi('Cursor',                    s:base2,      s:base5,    '')
-call s:hi('CursorColumn',              '',           s:base2,    '')
-call s:hi('CursorLine',                '',           s:base2,    'none')
-call s:hi('CursorLineNr',              s:light_blue, s:base2,    'none')
-call s:hi('Directory',                 s:blue,       '',         '')
-call s:hi('DiffAdd',                   s:green,      s:base2,    'none')
-call s:hi('DiffChange',                s:yellow,     s:base2,    'none')
-call s:hi('DiffDelete',                s:red,        s:base2,    'none')
-call s:hi('DiffText',                  s:blue,       s:base1,    'none')
-call s:hi('ErrorMsg',                  s:red,        s:base1,    'bold')
-call s:hi('FoldColumn',                s:base4,      s:base2,    '')
-call s:hi('Folded',                    s:base3,      s:base1,    '')
-call s:hi('IncSearch',                 s:beige,      '',         '')
-call s:hi('LineNr',                    s:base3,      '',         '')
-call s:hi('MatchParen',                s:light_blue, s:base1,    'underline,bold')
-call s:hi('ModeMsg',                   s:green,      '',         '')
-call s:hi('MoreMsg',                   s:green,      '',         '')
-call s:hi('NonText',                   s:base4,      '',         'none')
-call s:hi('Normal',                    s:base5,      s:base1,    'none')
-call s:hi('Pmenu',                     s:base5,      s:base3,    '')
-call s:hi('PmenuSbar',                 '',           s:base2,    '')
-call s:hi('PmenuSel',                  s:base2,      s:green,    '')
-call s:hi('PmenuThumb',                '',           s:base4,    '')
-call s:hi('Question',                  s:blue,       '',         'none')
-call s:hi('Search',                    s:base1,      s:beige,    '')
-call s:hi('SignColumn',                s:base5,      s:base1,    '')
-call s:hi('SpecialKey',                s:base4,      '',         '')
-call s:hi('SpellBad',                  s:red,        s:base1,    'underline')
-call s:hi('SpellCap',                  s:brown,      s:base1,    'none')
-call s:hi('SpellRare',                 s:brown,      s:base1,    'none')
-call s:hi('SpellLocal',                s:brown,      s:base1,    'none')
-call s:hi('StatusLine',                s:base5,      s:base3,    'none')
-call s:hi('StatusLineNC',              s:base2,      s:base4,    '')
-call s:hi('TabLine',                   s:base4,      s:base2,    'none')
-call s:hi('TabLineFill',               s:base4,      s:base2,    'none')
-call s:hi('TabLineSel',                s:yellow,     s:base3,    'none')
-call s:hi('Title',                     s:orange,     '',         'none')
-call s:hi('Visual',                    s:base5,      s:base3,    '')
-call s:hi('WarningMsg',                s:red,        '',         '')
-call s:hi('WildMenu',                  s:base2,      s:green,	   '')
+call s:hi('ColorColumn',               '',              s:base2,         '')
+call s:hi('Cursor',                    s:base2,         s:base5,         '')
+call s:hi('CursorColumn',              '',              s:base2,         '')
+call s:hi('CursorLine',                '',              s:base2,         'none')
+call s:hi('CursorLineNr',              s:light_blue,    s:base2,         'none')
+call s:hi('Directory',                 s:blue,          '',              '')
+call s:hi('DiffAdd',                   s:green,         s:base2,         'none')
+call s:hi('DiffChange',                s:yellow,        s:base2,         'none')
+call s:hi('DiffDelete',                s:red,           s:base2,         'none')
+call s:hi('DiffText',                  s:blue,          s:base1,         'none')
+call s:hi('ErrorMsg',                  s:red,           s:base1,         'bold')
+call s:hi('FoldColumn',                s:base4,         s:base2,         '')
+call s:hi('Folded',                    s:base3,         s:base1,         '')
+call s:hi('Search',                    s:golden_yellow, s:base3,         'bold')
+call s:hi('LineNr',                    s:base3,         '',              '')
+call s:hi('MatchParen',                s:light_blue,    s:base1,         'underline,bold')
+call s:hi('ModeMsg',                   s:green,         '',              '')
+call s:hi('MoreMsg',                   s:green,         '',              '')
+call s:hi('NonText',                   s:base4,         '',              'none')
+call s:hi('Normal',                    s:base5,         s:base1,         'none')
+call s:hi('Pmenu',                     s:base5,         s:base3,         '')
+call s:hi('PmenuSbar',                 '',              s:base2,         '')
+call s:hi('PmenuSel',                  s:base2,         s:green,         '')
+call s:hi('PmenuThumb',                '',              s:base4,         '')
+call s:hi('Question',                  s:blue,          '',              'none')
+call s:hi('IncSearch',                 s:golden_yellow, s:base1,         '')
+call s:hi('SignColumn',                s:base5,         s:base1,         '')
+call s:hi('SpecialKey',                s:base4,         '',              '')
+call s:hi('SpellBad',                  s:red,           s:base1,         'underline')
+call s:hi('SpellCap',                  s:brown,         s:base1,         'none')
+call s:hi('SpellRare',                 s:brown,         s:base1,         'none')
+call s:hi('SpellLocal',                s:brown,         s:base1,         'none')
+call s:hi('StatusLine',                s:base5,         s:base3,         'none')
+call s:hi('StatusLineNC',              s:base2,         s:base4,         '')
+call s:hi('TabLine',                   s:base4,         s:base2,         'none')
+call s:hi('TabLineFill',               s:base4,         s:base2,         'none')
+call s:hi('TabLineSel',                s:yellow,        s:base3,         'none')
+call s:hi('Title',                     s:orange,        '',              'none')
+call s:hi('Visual',                    s:base5,         s:base3,         '')
+call s:hi('WarningMsg',                s:red,           '',              '')
+call s:hi('WildMenu',                  s:base2,         s:green,	       '')
 
 " Solid bar for vertical split
 if g:neodark#solid_vertsplit == 1
@@ -299,25 +299,25 @@ else
 endif
 
 " Standard Syntax
-call s:hi('Comment',                   s:base4,      '',         'italic')
-call s:hi('Constant',                  s:red,        '',         '')
-call s:hi('String',                    s:orange,     '',         '')
-call s:hi('Character',                 s:orange,     '',         '')
-call s:hi('Identifier',                s:teal,       '',         'none')
-call s:hi('Function',                  s:blue,       '',         '')
-call s:hi('Statement',                 s:green,      '',         'none')
-call s:hi('Exception',                 s:red,        '',         '')
-call s:hi('PreProc',                   s:purple,     '',         '')
-call s:hi('Define',                    s:purple,     '',         'none')
-call s:hi('Macro',                     s:purple,     '',         '')
-call s:hi('Type',                      s:yellow,     '',         'none')
-call s:hi('StorageClass',              s:teal,       '',         '')
-call s:hi('Special',                   s:pink,       '',         '')
-call s:hi('Delimiter',                 s:base5,      '',         '')
-call s:hi('Underlined',                s:base5,      '',         'underline')
-call s:hi('Error',                     s:red,        s:base1,    'bold')
-call s:hi('Todo',                      s:base5,      s:base1,    'bold')
-call s:hi('Conceal',                   s:beige,      s:base1,    '')
+call s:hi('Comment',                   s:base4,         '',         'italic')
+call s:hi('Constant',                  s:red,           '',         '')
+call s:hi('String',                    s:orange,        '',         '')
+call s:hi('Character',                 s:orange,        '',         '')
+call s:hi('Identifier',                s:teal,          '',         'none')
+call s:hi('Function',                  s:blue,          '',         '')
+call s:hi('Statement',                 s:green,         '',         'none')
+call s:hi('Exception',                 s:red,           '',         '')
+call s:hi('PreProc',                   s:purple,        '',         '')
+call s:hi('Define',                    s:purple,        '',         'none')
+call s:hi('Macro',                     s:purple,        '',         '')
+call s:hi('Type',                      s:yellow,        '',         'none')
+call s:hi('StorageClass',              s:teal,          '',         '')
+call s:hi('Special',                   s:pink,          '',         '')
+call s:hi('Delimiter',                 s:base5,         '',         '')
+call s:hi('Underlined',                s:base5,         '',         'underline')
+call s:hi('Error',                     s:red,           s:base1,    'bold')
+call s:hi('Todo',                      s:base5,         s:base1,    'bold')
+call s:hi('Conceal',                   s:golden_yellow, s:base1,    '')
 
 " Languages {{{
 " Vim {{{
