@@ -10,7 +10,7 @@
 
 ! black
 *.color0:       #1F2F38
-*.color8:       #263A45
+*.color8:       #475C69
 
 ! red
 *.color1:       #DC657D
@@ -30,7 +30,7 @@
 
 ! purple
 *.color5:       #B888E2
-*.color13:      #475C69
+*.color13:      #263A45
 
 ! cyan
 *.color6:       #E18254

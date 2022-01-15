@@ -181,8 +181,8 @@ endif
 
 if g:neodark#use_custom_terminal_theme == 1
   let s:base1[1] = 0
-  let s:base2[1] = 8
-  let s:base3[1] = 13
+  let s:base2[1] = 13
+  let s:base3[1] = 8
   let s:base4[1] = 7
   let s:base5[1] = 15
 
