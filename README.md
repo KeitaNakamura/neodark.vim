@@ -1,4 +1,4 @@
-![header](https://github.com/KeitaNakamura/neodark.vim/blob/readme/img/header.png)
+![header](https://github.com/KeitaNakamura/neodark.vim/blob/master/img/header.png)
 
 ## Installation
 
