@@ -1,4 +1,4 @@
-*neodark.txt*				Modified: 2018 Oct
+*neodark.txt*				Modified: 2022 Jan
 
 
 	    neodark.vim - Dark Colorscheme by Keita Nakamura~
@@ -26,6 +26,7 @@ directories, using the native |packages| system or with a custom plugin
 manager. For |vim-plug|: >
 
 	Plug 'KeitaNakamura/neodark.vim'
+	set termguicolors    "recommended
 	colorscheme neodark
 <
 ==============================================================================
@@ -58,7 +59,7 @@ respectively.
 3. Airline and lightline Themes				*neodark-statusline*
 					*neodark-airline* *neodark-lightline*
 
-Themes for |Airline| and |lightline| are included. To enable in lightline: >
+Themes for |airline| and |lightline| are included. To enable in lightline: >
 
 	let g:lightline = {}
 	let g:lightline.colorscheme = 'neodark'
@@ -71,8 +72,7 @@ For airline, just use!
 ==============================================================================
 4. Terminal Themes					*neodark-terminal*
 
-Custom terminal themes (`terms/NeoDark.terminal` for Terminal.app and
-`terms/NeoDark.itermcolors` for iTerm2) are also available.
+Custom terminal themes are also available (see |term| folder).
 
 If you use a terminal which doesn't support true color like Terminal.app, you
 can get a true color scheme by enabling |g:neodark#use_custom_terminal_theme|.
