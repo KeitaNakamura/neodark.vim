@@ -8,6 +8,8 @@ set termguicolors                " recommended
 colorscheme neodark
 ```
 
+> **NOTE**: If you encounter error during the update, please reinstall the plugin. Sorry for inconvenience :(
+
 ## Options
 
 To use your default terminal background:
