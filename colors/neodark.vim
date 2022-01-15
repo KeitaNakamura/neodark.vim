@@ -149,7 +149,7 @@ endif
 
 let s:red           = ['#DC657D', 168]
 let s:green         = ['#84B97C', 108]
-let s:yellow        = ['#D4B261', 179]
+let s:yellow        = ['#D4AE58', 179]
 let s:blue          = ['#639EE4', 74]
 let s:purple        = ['#B888E2', 140]
 let s:orange        = ['#E18254', 173]
