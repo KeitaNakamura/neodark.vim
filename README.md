@@ -1,3 +1,5 @@
+### NOTE: If you an encounter an error during update, please reinstall the plugin. Sorry for inconvenience :(
+
 ![header](https://github.com/KeitaNakamura/neodark.vim/blob/master/img/header.png)
 
 ## Installation
@@ -7,8 +9,6 @@ Plug 'KeitaNakamura/neodark.vim' " vim-plug
 set termguicolors                " recommended
 colorscheme neodark
 ```
-
-> **NOTE**: If you encounter error during the update, please reinstall the plugin. Sorry for inconvenience :(
 
 ## Options
 
