@@ -379,6 +379,9 @@ call s:hi('IndentGuidesEven',          '',           s:base2,    '')
 " coc-nvim
 call s:hi('CocSearch', s:golden_yellow, s:base2, '')
 
+" vimtex
+hi! link texMathZone Function
+
 " indentLine
 let g:indentLine_color_gui = s:base3[0]
 let g:indentLine_bgcolor_gui = s:base1[0]
