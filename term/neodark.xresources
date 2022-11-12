@@ -14,7 +14,7 @@
 
 ! red
 *.color1:       #DC657D
-*.color9:       #E69CA0
+*.color9:       #DC94A2
 
 ! green
 *.color2:       #84B97C
