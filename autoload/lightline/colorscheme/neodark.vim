@@ -9,6 +9,7 @@ let s:green  = neodark#get_color('Statement', 'fg')
 let s:yellow = neodark#get_color('Type',      'fg')
 let s:blue   = neodark#get_color('Function',  'fg')
 let s:orange = neodark#get_color('String',    'fg')
+let s:purple = neodark#get_color('PreProc',   'fg')
 
 let s:p = {
 			\ 'normal':   {},
@@ -16,7 +17,8 @@ let s:p = {
 			\ 'insert':   {},
 			\ 'replace':  {},
 			\ 'visual':   {},
-			\ 'tabline':  {}}
+			\ 'tabline':  {},
+			\ 'command':  {}}
 
 " [[guifg, guibg, ctermfg, ctermbg], ...]
 let s:p.normal.middle = [
@@ -26,7 +28,7 @@ let s:p.normal.left = [
             \ [s:base5[0], s:base3[0], s:base5[1], s:base3[1]]]
 let s:p.normal.right = [
             \ [s:base1[0], s:base4[0], s:base1[1], s:base4[1]],
-            \ [s:base4[0], s:base3[0], s:base4[1], s:base3[1]]]
+            \ [s:base1[0], s:base3[0], s:base1[1], s:base3[1]]]
 let s:p.normal.error = [
             \ [ s:base2[0], s:red[0], s:base2[1], s:red[1]]]
 let s:p.normal.warning = [
@@ -35,10 +37,10 @@ let s:p.normal.warning = [
 let s:p.inactive.middle = [
 			\ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.inactive.right = [
-			\ [s:base4[0], s:base3[0], s:base4[1], s:base3[1]],
+			\ [s:base1[0], s:base3[0], s:base1[1], s:base3[1]],
 			\ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 let s:p.inactive.left = [
-			\ [s:base4[0], s:base3[0], s:base4[1], s:base3[1]],
+			\ [s:base1[0], s:base3[0], s:base1[1], s:base3[1]],
 			\ [s:base4[0], s:base2[0], s:base4[1], s:base2[1]]]
 
 let s:p.insert.left = [
@@ -49,6 +51,9 @@ let s:p.replace.left = [
 			\ s:p.normal.left[1]]
 let s:p.visual.left = [
 			\ [s:base1[0], s:orange[0], s:base1[1], s:orange[1]],
+			\ s:p.normal.left[1]]
+let s:p.command.left = [
+			\ [s:base1[0], s:purple[0], s:base1[1], s:purple[1]],
 			\ s:p.normal.left[1]]
 
 let s:p.tabline.middle = [
