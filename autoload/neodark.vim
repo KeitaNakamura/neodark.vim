@@ -1,8 +1,3 @@
-if exists("g:loaded_neodark")
-  finish
-endif
-let g:loaded_neodark = 1
-
 let s:save_cpo = &cpo
 set cpo&vim
 
@@ -14,7 +9,6 @@ function neodark#get_color(hlgroup, fg_or_bg)
   endif
   return [l:gui, l:cterm]
 endfunction
-
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
