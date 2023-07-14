@@ -78,7 +78,7 @@ If you use a terminal which doesn't support true color like Terminal.app, you
 can get a true color scheme by enabling |g:neodark#use_custom_terminal_theme|.
 
 ==============================================================================
-5. tmux
+5. tmux								*neodark-tmux*
 
 You can set tmux colors with: >
 	cat tmuxcolors.conf >> ~/.tmux.conf
@@ -88,7 +88,7 @@ or >
 in `.tmux.conf` with Tmux Plugin Manager (https://github.com/tmux-plugins/tpm).
 
 ==============================================================================
-6. Inspiration and Special Thanks
+6. Inspiration and Special Thanks				*neodark-thanks*
 
  - tyrannicaltoucan/vim-deep-space
    https://github.com/tyrannicaltoucan/vim-deep-space
